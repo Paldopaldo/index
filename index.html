@@ -1,0 +1,1181 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Las Huertas Staycation | Clean · Safe · Reliable</title>
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+
+
+
+
+
+
+    body {
+      font-family: 'Special Elite', monospace;
+      /* This is how u add comments btw. Lmk if ya'll wanna change the bg */
+      /* if u wanna add images, use imgur. I made a website, pa check nlang */
+      /* para organized */
+      background: url('https://i.imgur.com/EnOPnka.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ff2679;
+      line-height: 1.4;
+      scroll-behavior: smooth;
+    }
+    /* website colours */
+    :root {
+      --pink: #caa2d6;
+      --pink: #e272a1;
+      --cream: #fff9ef;
+      --white: #f1ede4;
+      --dark-pink: #a72944;
+      --soft-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+
+
+
+
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+
+
+
+
+
+
+
+
+    /* header & hero */
+    .hero {
+      background: linear-gradient(135deg, #e99ed0 0%, #cf3838 100%);
+      border-radius: 2rem;
+      padding: 2rem 2rem 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      color: white;
+      box-shadow: var(--soft-shadow);
+    }
+
+
+
+
+
+
+
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+
+
+
+
+
+
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-bottom: 0.75rem;
+    }
+
+
+
+
+
+
+
+
+    .address {
+      background: rgba(202, 107, 107, 0.12);
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 400;
+      backdrop-filter: blur(2px);
+      margin-top: 0.5rem;
+    }
+
+
+
+
+
+
+
+
+    /* feature badges */
+    .feature-badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.8rem 0 0.8rem;
+    }
+
+
+
+
+
+
+
+
+    .badge {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+
+
+
+   
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.8rem;
+    }
+
+
+
+
+
+
+
+
+    .card {
+      flex: 1;
+      min-width: 260px;
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e9e2d4;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+    }
+
+
+
+
+
+
+
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+
+
+
+
+
+    .card h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #f162a5;
+      border-left: 4px solid #ff5067;
+      padding-left: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+
+
+
+
+
+
+
+    .duration-list {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.2rem;
+    }
+
+
+
+
+
+
+
+
+    .duration-chip {
+      background: #edf3e7;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #b3396c;
+    }
+
+
+
+
+
+
+
+
+    .checkin-note {
+      background: #fef7e0;
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      border-left: 3px solid #f7aeea;
+    }
+
+
+
+
+
+
+
+
+    .booking-steps {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+
+
+
+
+
+
+
+    .booking-steps li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+
+
+
+
+
+
+
+    .step-number {
+      background: #df86c4;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+
+
+
+
+
+
+
+    .info-line {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+
+
+
+
+
+
+
+    .important {
+      background: #fef3e2;
+      border-radius: 1rem;
+      padding: 1rem 1.4rem;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #7a0b55;
+    }
+
+
+
+
+
+
+
+
+    /* form section */
+    .booking-form-wrapper {
+      background: #fffcf5;
+      border-radius: 1.8rem;
+      border: 1px solid #e3d9cb;
+      padding: 1.8rem 2rem;
+      margin: 1rem 0 2rem;
+      box-shadow: var(--soft-shadow);
+    }
+
+
+
+
+
+
+
+
+    .booking-form-wrapper h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #45203d;
+      margin-bottom: 0.4rem;
+    }
+
+
+
+
+
+
+
+
+    .form-sub {
+      color: #b16893;
+      margin-bottom: 1.5rem;
+      border-left: 2px solid #cf9bcb;
+      padding-left: 0.8rem;
+    }
+
+
+
+
+
+
+
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.3rem;
+    }
+
+
+
+
+
+
+
+
+    .input-group {
+      flex: 1;
+      min-width: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+
+
+
+
+
+
+
+    .input-group label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #e7a4b9;
+      letter-spacing: 0.3px;
+    }
+
+
+
+
+
+
+
+
+    .input-group input,
+    .input-group select {
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid #ddd2c0;
+      background: white;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+
+
+
+
+
+
+
+    .input-group input:focus,
+    .input-group select:focus {
+      outline: none;
+      border-color: #b37597;
+      box-shadow: 0 0 0 2px rgba(111, 143, 92, 0.2);
+    }
+
+
+
+
+
+
+
+
+    .btn-submit {
+      background: #a36398;
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 0.5rem;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+
+
+
+
+
+
+
+    .btn-submit:hover {
+      background: #c4173d;
+      transform: scale(0.98);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+
+
+
+
+
+    .note-message {
+      font-size: 1rem;
+      color: #ac71b4;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+    .success-msg {
+      background: #e0f0da;
+      padding: 0.8rem;
+      border-radius: 1.2rem;
+      margin-top: 1rem;
+      text-align: center;
+      color: #9b5472;
+      font-weight: 500;
+      display: none;
+    }
+
+
+
+
+
+
+
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e2d9cd;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #705c6b;
+    }
+
+
+
+
+
+
+
+
+    /* ADDED: Browse Units Section Styles */
+    .browse-section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .browse-section h2 {
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin-bottom: 1.5rem;
+      background: rgba(0,0,0,0.2);
+      display: inline-block;
+      padding: 0.2rem 1.5rem;
+      border-radius: 60px;
+      backdrop-filter: blur(3px);
+    }
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-top: 0.5rem;
+    }
+    .unit-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 2px solid #fce7ed;
+      cursor: pointer;
+      transition: 0.25s ease-in-out;
+      text-align: left;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+    .unit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 28px rgba(0,0,0,0.15);
+      border-color: #e272a1;
+    }
+    .card-img {
+      height: 190px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .card-content {
+      padding: 1.2rem 1.2rem 1.4rem;
+    }
+    .unit-name-title {
+      font-size: 1.35rem;
+      color: #a72944;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+    .unit-tagline {
+      font-size: 0.8rem;
+      color: #a86f8a;
+      margin-bottom: 0.8rem;
+    }
+    .feature-chip {
+      display: inline-block;
+      background: #fce7ed;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #a72944;
+    }
+
+
+
+
+    /* MODAL styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center; align-items: center;
+      padding: 20px;
+    }
+    .modal.active { display: flex; }
+    .modal-content {
+      background: #f1ede4;
+      max-width: 900px;
+      width: 100%;
+      max-height: 85vh;
+      border-radius: 2rem;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    }
+    .close-modal {
+      position: absolute; top: 18px; right: 20px;
+      background: #e272a1; border: none; color: white;
+      width: 42px; height: 42px; border-radius: 50%; cursor: pointer;
+      font-size: 1.2rem; font-weight: bold;
+    }
+    .close-modal:hover { background: #b3396c; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 1.8rem 0 0.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 16px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border: 2px solid #f3dfcf;
+    }
+
+
+
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 1rem;
+      }
+      .hero {
+        padding: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .card {
+        padding: 1.2rem;
+      }
+      .booking-form-wrapper {
+        padding: 1.2rem;
+      }
+      .browse-section h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+
+     /* About the Owner Section */
+    .about-owner-section {
+      background: linear-gradient(135deg, #fff0f5 0%, #fce7ed 100%);
+      border-radius: 2rem;
+      border: 1px solid #f3c8d8;
+      padding: 2.5rem;
+      margin: 1.5rem 0 2rem;
+      box-shadow: var(--soft-shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .about-owner-section::before {
+      content: '🌸';
+      position: absolute;
+      top: -10px;
+      right: 30px;
+      font-size: 5rem;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .about-owner-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #a72944;
+      border-left: 4px solid #e272a1;
+      padding-left: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+    .owner-inner {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .owner-photo-wrap {
+      flex-shrink: 0;
+    }
+    .owner-photo-wrap img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      border: 4px solid #e272a1;
+      box-shadow: 0 8px 20px rgba(167, 41, 68, 0.2);
+      display: block;
+    }
+    /* Fallback placeholder if image fails to load */
+    .owner-photo-placeholder {
+      width: 200px;
+      height: 200px;
+      border-radius: 1.5rem;
+      border: 4px solid #e272a1;
+      background: linear-gradient(135deg, #fce7ed, #e99ed0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      box-shadow: 0 8px 20px rgba(167, 41, 68, 0.2);
+    }
+    .owner-text { flex: 1; min-width: 220px; }
+    .owner-quote {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #5e3a4b;
+      font-style: italic;
+      position: relative;
+      padding-left: 1.2rem;
+      border-left: 3px solid #f7aeea;
+      margin-bottom: 1.5rem;
+    }
+    .owner-quote::before {
+      content: '"';
+      font-size: 3rem;
+      color: #e272a1;
+      opacity: 0.25;
+      position: absolute;
+      top: -0.5rem;
+      left: -0.8rem;
+      font-style: normal;
+      line-height: 1;
+    }
+    .owner-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #a72944;
+      margin-bottom: 0.25rem;
+    }
+    .owner-title {
+      font-size: 0.9rem;
+      color: #b16893;
+    }
+ 
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e2d9cd;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #705c6b;
+    }
+ 
+    @media (max-width: 700px) {
+      .container { padding: 1rem; }
+      .hero { padding: 1.5rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .card { padding: 1.2rem; }
+      .booking-form-wrapper { padding: 1.2rem; }
+      .browse-section h2 { font-size: 1.6rem; }
+      .about-owner-section { padding: 1.5rem; }
+      .owner-inner { flex-direction: column; align-items: center; text-align: center; }
+      .owner-quote { border-left: none; padding-left: 0; border-top: 3px solid #f7aeea; padding-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+ 
+  <div class="hero">
+    <h1> Las Huertas Staycation</h1>
+    <div class="tagline">CLEAN · SAFE · RELIABLE · MULTIPLE UNITS</div>
+    <div class="address">
+      📍 102 Plaza Condominium, near LRT2 Antipolo / SM Masinag
+    </div>
+    <div class="feature-badge">
+      <span class="badge">🏡 10h | 12h | 22h stays</span>
+      <span class="badge">⏰ 7AM–10PM regular check-in</span>
+      <span class="badge">🔑 multiple units ready</span>
+    </div>
+  </div>
+
+
+
+
+  <div class="info-grid">
+    <div class="card">
+      <h2>🏷️ Stay details</h2>
+      <div><strong>Stay duration available:</strong></div>
+      <div class="duration-list">
+        <span class="duration-chip">10 hours</span>
+        <span class="duration-chip">12 hours</span>
+        <span class="duration-chip">22 hours</span>
+      </div>
+      <div class="info-line">🕒 <strong>Regular check-in:</strong> 7:00 AM — 10:00 PM</div>
+      <div class="checkin-note">
+        ⚡ Early / late check-in subject to availability.<br>
+        ➕ Additional fees may apply.
+      </div>
+      <div class="important">
+        🧹 FOR RESPONSIBLE GUESTS ONLY — we maintain a peaceful, clean environment.
+      </div>
+    </div>
+
+
+
+
+    <div class="card">
+      <h2>📋 How to book</h2>
+      <p style="margin-bottom: 0.8rem;">Send us a message with the info below ➡️</p>
+      <ul class="booking-steps">
+        <li><span class="step-number">1</span> 📅 <strong>Date</strong> (check-in date)</li>
+        <li><span class="step-number">2</span> ⏱️ <strong>Stay duration</strong> (10h / 12h / 22h)</li>
+        <li><span class="step-number">3</span> 👥 <strong>No. of pax</strong> (number of guests)</li>
+        <li><span class="step-number">4</span> ⏰ <strong>Preferred check-in time</strong></li>
+        <li><span class="step-number">5</span> 🏠 <strong>Preferred unit</strong> (optional)</li>
+      </ul>
+      <div style="background: #f6f2ea; border-radius: 1rem; padding: 0.8rem; margin-top: 0.6rem;">
+        💬 <strong>Reach out via:</strong> message us on Facebook / Instagram or 📞 +63 912 345 6789<br>
+        ✉️ <span style="font-family: monospace;">casaindustria888@gmail.com</span><br>
+        (Response within hours)
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Browse Units Section -->
+  <div class="browse-section">
+    <h2>✨ Browse Our Units ✨</h2>
+    <div class="units-grid" id="unitsGrid"></div>
+  </div>
+
+
+
+
+  <div class="booking-form-wrapper">
+    <h3>✍️ Request a booking</h3>
+    <div class="form-sub">Fill the details — this will open your email app to send the request</div>
+    <form id="bookingForm">
+      <div class="form-row">
+        <div class="input-group">
+          <label>📅 Date (check-in)</label>
+          <input type="date" id="bookingDate" required>
+        </div>
+        <div class="input-group">
+          <label>⏱️ Stay duration</label>
+          <select id="duration" required>
+            <option value="">-- select --</option>
+            <option value="10 hours">10 hours</option>
+            <option value="12 hours">12 hours</option>
+            <option value="22 hours">22 hours</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label>👥 No. of pax</label>
+          <input type="number" id="pax" min="1" max="12" placeholder="e.g., 2" required>
+        </div>
+        <div class="input-group">
+          <label>⏰ Preferred check-in time</label>
+          <input type="text" id="checkinTime" placeholder="e.g., 2:00 PM, 9:30 AM" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group">
+          <label>🏠 Preferred unit (optional)</label>
+          <input type="text" id="unit" placeholder="e.g., Unit 405, or any available">
+        </div>
+        <div class="input-group">
+          <label>Your name (optional)</label>
+          <input type="text" id="guestName" placeholder="Name for booking">
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">📩 Send booking request →</button>
+      <div id="successMessage" class="success-msg"></div>
+      <div class="note-message">
+        📧 This will open your email app. Just click send to complete your booking request. <br>
+            Or contact us on our facebook page
+        <a href="https://www.facebook.com/lashuertasstaycation?rdid=F7m1Za1QXy4gUkkC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F189wdkgvwo%2F#">Las Huertas Staycation.</a>
+      </div>
+    </form>
+  </div>
+
+
+
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; background: #f9f6ef; border-radius: 1.4rem; padding: 1.2rem 1.8rem; margin: 1rem 0;">
+    <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 1.7rem;">🧹</span> <strong>Spotless units</strong> — sanitized before each stay</div>
+    <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 1.7rem;">🔐</span> <strong>Safe & secure</strong> condo premises</div>
+    <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 1.7rem;">🏢</span> <strong>Multiple units</strong> ready for groups & families</div>
+  </div>
+
+
+   <!-- About the Owner Section -->
+  <div class="about-owner-section">
+    <h2>🌸 About the Owner</h2>
+    <div class="owner-inner">
+      <div class="owner-photo-wrap">
+       
+        <img src="c:\Users\Leo Justin Magbaril\Downloads\mrs. huertas.jpg" alt="Mary Sunshine Huertas" class="profile-img">
+      </div>
+      <div class="owner-text">
+        <p class="owner-quote">
+        Her main goal is to ensure that each and every one of her guests has an enjoyable stay, but she is equally committed to ensuring that each client feels safe and at home as soon as they step through her door.</p>
+            <br>
+            <p class="owner-name">Mary Sunshine Huertas</p>
+        <p class="owner-title">Owner of Las Huertas Staycation</p>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    🌱 Las Huertas Staycation — Clean. Safe. Reliable. Multiple units. <br>
+    📍 102 Plaza Condominium, near LRT2 Antipolo / SM Masinag · For responsible guests only.<br>
+    📞 Contact: +63 912 345 6789 | ✉️ casaindustria888@gmail.com
+  </footer>
+</div>
+
+
+<!-- Modal for unit gallery -->
+<div id="unitModal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" id="closeBtn">✕</button>
+    <h2 id="modalTitle" style="color: #a72944;"></h2>
+    <p id="modalDesc" style="margin: 12px 0 8px; color: #5e3a4b;"></p>
+    <div id="modalGallery" class="gallery-grid"></div>
+  </div>
+</div>
+
+
+<script>
+  // Units data with updated descriptions
+  const unitsData = [
+    {
+      name: "CASA ALLEGRO",
+      tagline: "Maximalist design · dim-energy vibes",
+      img: "https://i.imgur.com/EcHQjEv.jpeg",
+      desc: "Perfect for hang-out, partying indoors and drinking night. Maximalist design with dim-energy vibes for unforgettable nights.",
+      gallery: ["https://i.imgur.com/OROD0ef.jpeg", "https://i.imgur.com/AvgrOAU.jpeg", "https://i.imgur.com/d3Ymp9G.jpeg", "https://i.imgur.com/rPv9l2r.jpeg", "https://i.imgur.com/THXPcB2.jpeg", "https://i.imgur.com/5fGLmpp.jpeg"]
+    },  // ← COMMA ADDED HERE!
+    {
+      name: "CASA FINO",
+      tagline: "Luxurious elegance · clean minimalist style",
+      img: "https://i.imgur.com/t0VpaF3.jpeg",
+      desc: "Best for comfort and relaxation with a hint of clean modern and minimalist style. Luxurious elegance at its finest.",
+      gallery: ["https://i.imgur.com/b7taICn.jpeg", "https://i.imgur.com/4zL92tk.jpeg", "https://i.imgur.com/hvPOr3n.jpeg", "https://i.imgur.com/UkzYv6h.jpeg", "https://i.imgur.com/srXhXZ8.jpeg", "https://i.imgur.com/YTHu4gw.jpeg"]
+    },
+    {
+      name: "CASA MARINO",
+      tagline: "Coastal vibes · nautical ambience",
+      img: "https://i.imgur.com/2vah7yR.jpeg",
+      desc: "Deep sea and long travel inside a yacht experience. A combination of comfort and nautical ambience for coastal relaxation.",
+      gallery: ["https://i.imgur.com/u39Mav3.jpeg", "https://i.imgur.com/KMnwhN4.jpeg", "https://i.imgur.com/PjDb3AI.jpeg", "https://i.imgur.com/yhTcOvO.jpeg", "https://i.imgur.com/H1E3lqt.jpeg", "https://i.imgur.com/oPV0FJJ.jpeg"]
+    },
+    {
+      name: "CASA VICTORIA",
+      tagline: "Vintage vibes · golden elegance",
+      img: "https://i.imgur.com/ssZB2mV.jpeg",
+      desc: "Golden furnitures with a blended classic and elegance. Vintage vibes for timeless romantic stays.",
+      gallery: ["https://i.imgur.com/PSGV8Fw.jpeg", "https://i.imgur.com/2jAPhAH.jpeg", "https://i.imgur.com/HOZSj7y.jpeg", "https://i.imgur.com/uYZwbPq.jpeg", "https://i.imgur.com/Gd1yO8n.jpeg", "https://i.imgur.com/XconByC.jpeg"]
+    },
+    {
+      name: "CASA SEMPLICITA",
+      tagline: "Serene simplicity · warm wooden style",
+      img: "https://i.imgur.com/76qTWJu.jpeg",
+      desc: "The comfort of simplicity and a serene warm vibes with wooden style and plants in a minimalist design.",
+      gallery: ["https://i.imgur.com/WJ1ejZ6.jpeg", "https://i.imgur.com/6gKy3g0.jpeg", "https://i.imgur.com/Shna3Nw.jpeg", "https://i.imgur.com/H16sgDP.jpeg", "https://i.imgur.com/QPdAjhf.jpeg", "https://i.imgur.com/PYwnqL8.jpeg"]
+    },
+    {
+      name: "CASA MACHO",
+      tagline: "Retro style · barcade design",
+      img: "https://i.imgur.com/HzKKL2w.jpeg",
+      desc: "Encaptures retro style with a barcade design best for playing while staying indoors. Gaming and relaxation combined.",
+      gallery: ["https://i.imgur.com/8YjiG0J.jpeg", "https://i.imgur.com/XkSyJFC.jpeg", "https://i.imgur.com/zauNWd3.jpeg", "https://i.imgur.com/UBOQRxy.jpeg", "https://i.imgur.com/BC0sFk7.jpeg", "https://i.imgur.com/Abvk35e.jpeg"]
+    },
+    {
+      name: "CASA INDUSTRIA",
+      tagline: "Warm home stay · stylish comfort",
+      img: "https://i.imgur.com/HQrA8Xq.jpeg",
+      desc: "Inviting warm home stay perfect for travelers blending relaxation and comfort in a stylish room.",
+      gallery: ["https://i.imgur.com/SQD417Z.jpeg", "https://i.imgur.com/rhfpRxl.jpeg", "https://i.imgur.com/mKCpJVv.jpeg", "https://i.imgur.com/mdI4sLY.jpeg", "https://i.imgur.com/s4ESg2D.jpeg", "https://i.imgur.com/RneIG6Y.jpeg" ]
+    }
+  ];
+
+
+
+
+  // Render unit cards
+  function renderCards() {
+    const grid = document.getElementById('unitsGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    unitsData.forEach(unit => {
+      const card = document.createElement('div');
+      card.className = 'unit-card';
+      card.innerHTML = `
+        <div class="card-img" style="background-image: url('${unit.img}')"></div>
+        <div class="card-content">
+          <div class="unit-name-title">${unit.name}</div>
+          <div class="unit-tagline">${unit.tagline}</div>
+          <div class="feature-chip">Explore Interior →</div>
+        </div>
+      `;
+      card.onclick = () => openModal(unit);
+      grid.appendChild(card);
+    });
+  }
+
+
+
+
+  // Open modal with unit details
+  function openModal(unit) {
+    document.getElementById('modalTitle').innerText = unit.name;
+    document.getElementById('modalDesc').innerText = unit.desc;
+    const gal = document.getElementById('modalGallery');
+    gal.innerHTML = '';
+    unit.gallery.forEach(url => {
+      const img = document.createElement('img');
+      img.src = url;
+      gal.appendChild(img);
+    });
+    document.getElementById('unitModal').classList.add('active');
+  }
+
+
+
+
+  // Close modal
+  document.getElementById('closeBtn').onclick = () => {
+    document.getElementById('unitModal').classList.remove('active');
+  };
+
+
+
+
+  // Close modal when clicking outside
+  window.onclick = (e) => {
+    const modal = document.getElementById('unitModal');
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  };
+
+
+
+
+  // ORIGINAL BOOKING FORM SCRIPT (unchanged)
+  (function() {
+    const form = document.getElementById('bookingForm');
+    const successDiv = document.getElementById('successMessage');
+
+
+
+
+    function formatDate(dateString) {
+      if (!dateString) return 'Not specified';
+      const parts = dateString.split('-');
+      if (parts.length !== 3) return dateString;
+      const dateObj = new Date(dateString);
+      return dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+
+
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+
+
+
+      const dateRaw = document.getElementById('bookingDate').value;
+      const duration = document.getElementById('duration').value;
+      const pax = document.getElementById('pax').value;
+      const checkinTime = document.getElementById('checkinTime').value.trim();
+      const unit = document.getElementById('unit').value.trim();
+      const guestName = document.getElementById('guestName').value.trim();
+
+
+
+
+      if (!dateRaw) {
+        alert('Please select the check-in date.');
+        return;
+      }
+      if (!duration) {
+        alert('Please select a stay duration (10h / 12h / 22h).');
+        return;
+      }
+      if (!pax || pax < 1) {
+        alert('Please enter valid number of guests (pax).');
+        return;
+      }
+      if (!checkinTime) {
+        alert('Please enter your preferred check-in time.');
+        return;
+      }
+
+
+
+
+      const formattedDate = formatDate(dateRaw);
+      const subject = `Booking Request - Las Huertas Staycation - ${formattedDate}`;
+      let body = `NEW BOOKING REQUEST - Las Huertas Staycation\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📅 Date: ${formattedDate}\n⏱️ Stay duration: ${duration}\n👥 No. of pax: ${pax}\n⏰ Preferred check-in time: ${checkinTime}\n🏠 Preferred unit: ${unit ? unit : 'Any available unit'}\n🧑 Guest name: ${guestName ? guestName : 'Not provided'}\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n✨ FOR RESPONSIBLE GUESTS ONLY ✨\n\nPlease confirm availability and let us know if there are any additional fees for early/late check-in.\n\n📍 Location: 102 Plaza Condominium, near LRT2 Antipolo / SM Masinag\n\nThank you!`;
+     
+      const mailtoLink = `mailto:casaindustria888@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+     
+      successDiv.style.display = 'block';
+      successDiv.innerHTML = '✅ Your email client has opened! Please review and click send to complete your booking request.';
+      successDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+
+
+
+    const dateInput = document.getElementById('bookingDate');
+    if (dateInput) {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+      const tomorrow = new Date(today);
+      tomorrow.setDate(today.getDate() + 1);
+      const yyyy2 = tomorrow.getFullYear();
+      const mm2 = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const dd2 = String(tomorrow.getDate()).padStart(2, '0');
+      dateInput.value = `${yyyy2}-${mm2}-${dd2}`;
+    }
+  })();
+
+
+
+
+  // Initialize units on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    renderCards();
+  });
+</script>
+</body>
+</html>
